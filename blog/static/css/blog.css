@@ -4,7 +4,8 @@ h1 a, h2 a{
 }
 body {
     padding-left: 15px;
-    background-color: FFFAF0;
+    background-color:  #F5F5DC;
+    font-family: 'Lobster';
 }
 .page-header {
     background-color: #00FFFF;
@@ -25,7 +26,6 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
-    color: 7FFFD4;
 }
 
 .date {
@@ -41,13 +41,13 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
 }
 
 .post {
+    color: #010000;
     margin-bottom: 70px;
 }
 
