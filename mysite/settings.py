@@ -1,4 +1,3 @@
-import os
 """
 Django settings for mysite project.
 
@@ -10,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os 
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +25,7 @@ SECRET_KEY = 'django-insecure-rhb-+k!)$x&nquhpa%kn_0_d#dagkdj+evy)vh%bm7n*re-#aw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '11baton1.pythonanywhere.com']
+ALLOWED_HOSTS = []
 #test123
 
 
@@ -39,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog', 	
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -47,9 +46,10 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'DjangoLibrary.middleware.AutologinAuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -86,6 +86,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
