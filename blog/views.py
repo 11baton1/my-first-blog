@@ -55,3 +55,8 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
+
+def dziel(a, b):
+    if b == 0:
+        return None
+    return a/b
